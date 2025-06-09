@@ -23,17 +23,13 @@ Yet no award for you……
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130856615-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E7XLYRQ39"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'UA-130856615-1');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-9E7XLYRQ39');
     </script>
 
 
@@ -58,9 +54,9 @@ Yet no award for you……
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-
+    
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %} | {{ site.subtitle}}</title>
-
+    
     <!--live2d function-->
     <script src="/assets/live2dw/lib/L2Dwidget.min.js"></script>
     <script>L2Dwidget.init({
@@ -82,13 +78,13 @@ Yet no award for you……
           content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="baidu-site-verification" content="fjE6fa4d3J"/>
     <meta name="author" content="{{ site.author }}">
-
+    
     <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.png">
     <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="/favicon.png">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "
     /feed.xml" | prepend: site.baseurl }}">
-
+    
     <link rel="stylesheet" type="text/css" href="{{ "
     /assets/css/normalize.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" type="text/css" href="{{ "
@@ -97,7 +93,7 @@ Yet no award for you……
     /assets/css/grids-responsive-min.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" type="text/css" href="{{ "
     /assets/css/style.css?v=1514870841" | prepend: site.baseurl }}">
-
+    
     <!--use mathJax to edit formulas in LaTex grammar.-->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -134,7 +130,7 @@ Yet no award for you……
         <div class="site-name">
             <h1 class="hidden">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
             <a id="logo" href="/.">{{ site.title }}</a>
-            <p class="description">{{ site.subtitle }}，幸会。</p>
+            <p class="description">{{ site.subtitle }}</p>
         </div>
         <div id="nav-menu">
             {% for menu in site.menu %}
@@ -165,21 +161,21 @@ Yet no award for you……
                 {{ content }}
             </div>
         </div>
-
+    
         <div class="pure-u-1-4">
             <div id="sidebar">
                 {% include widgets/search_box_new %}
-
+    
                 {% include widgets/personlized_signature %}
-
+    
                 {% include widgets/category_list %}
-
+    
                 {% include widgets/star_post_list %}
-
+    
                 {% include widgets/codehub_list %}
-
+    
                 {% include widgets/link_list %}
-
+    
                 {% include widgets/post_toc %}
             </div>
         </div>
@@ -187,17 +183,17 @@ Yet no award for you……
 
 
     <div id="footer">
-        Copyright &copy; 2015-<span id="cur_year"></span> <a href="https://www.oukohou.wang/">oukohou</a> - All Rights
+        Copyright &copy; 2006-<span id="cur_year"></span> <a href="域名代替换">kirishi</a> - All Rights
         Reserved.
         Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a
-            href="https://github.com/oukohou/oukohou.github.io" target="_blank">Github.com</a>
+            href="https://github.com/kirishiqaq/kirishiqaq.github.io" target="_blank">Github.com</a>
         <script type="text/javascript">var cur_date = new Date();
         document.getElementById("cur_year").innerHTML = cur_date.getFullYear();</script>
         {% if site.beian %}
         <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/"> {{ site.beian }}.</a>
         {% endif %}
     </div>
-
+    
     <a id="rocket" href="#top" class="show"></a>
     <script src="/assets/js/totop.js" type="text/javascript"></script>
 </div>

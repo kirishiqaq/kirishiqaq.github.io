@@ -972,30 +972,6 @@ table tr:nth-child(2n) {
 	background: #f7f8f8;
 }
 
-/* donate */
-#donate {
-	text-align: center;
-	margin: 0 0 0.8em;
-}
-
-#donate button {
-	color: #F2F2F2;
-	font-size: 20px;
-	padding-top: 6px;
-	padding-bottom: 6px;
-	padding-left: 15px;
-	padding-right: 15px;
-	box-shadow: rgb(233, 235, 230) 2px 3px 5px 0px;
-	border-width: 2px;
-	border-color: rgb(233, 235, 230);
-	border-style: solid;
-	border-radius: 10px;
-	background-color: #949494;
-}
-
-#donate button:hover {
-	background-color: #878787;
-}
 
 .hide {
     display: none;

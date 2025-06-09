@@ -1,4 +1,4 @@
 # robots.txt  
 User-agent: *
 Disallow: 
-Sitemap: http://www.oukohou.wang/sitemap.xml
+Sitemap: 域名代替换/sitemap.xml
