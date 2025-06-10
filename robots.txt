@@ -1,4 +1,4 @@
 # robots.txt  
 User-agent: *
 Disallow: 
-Sitemap: 域名代替换/sitemap.xml
+Sitemap: kirishiqaq.com/sitemap.xml
