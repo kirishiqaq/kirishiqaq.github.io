@@ -9,18 +9,14 @@
     <meta name="author" content="{{ site.author }}">
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 
-    <!-- 将所有CSS内联 -->
     <style>
-        /* 鼠标样式开始 */
+        /* 鼠标样式 */
         body {
-            /* 默认箭头 */
-            cursor: url('./Maxwell_Who-CatCursor/pointer.ico'), default;
+            cursor: url('https://kirishiqaq.github.io/Maxwell_Who-CatCursor/pointer.ico'), default;
         }
 
-        a,
-        img,
-        button {
-            cursor: url('./Maxwell_Who-CatCursor/alternate.ico'), default;
+        a, img, button {
+            cursor: url('https://kirishiqaq.github.io/Maxwell_Who-CatCursor/alternate.ico'), default;
         }
 
         /* 宠物容器样式 */
@@ -31,7 +27,7 @@
             z-index: 9999;
             left: 50px;
             bottom: 50px;
-            cursor: url('./Maxwell_Who-CatCursor/alternate.ico'), default;
+            cursor: url('https://kirishiqaq.github.io/Maxwell_Who-CatCursor/alternate.ico'), default;
             display: flex;
             pointer-events: auto;
         }
@@ -41,7 +37,7 @@
             height: 90px;
             pointer-events: none;
             user-select: none;
-            object-fit: contain; /* 确保图片完整显示 */
+            object-fit: contain;
         }
 
         /* 猫咪的对话框 */
@@ -84,7 +80,7 @@
             transform: translateX(-50%);
         }
 
-        /* 404页面样式 */
+        /* 你原有的404页面样式（保持不变） */
         body {
             background-color: #F2F2F2;
             color: #444;
@@ -141,6 +137,12 @@
             margin: 0 0 15px 0;
             line-height: 1;
             font-family: "Times New Roman", Georgia, Times, serif;
+        }
+        .error-title {
+            font-size: 24px;
+            color: #555;
+            margin: 0 0 15px 0;
+            font-weight: normal;
         }
         .error-message {
             font-size: 16px;
@@ -371,7 +373,7 @@
 <body>
 <!--宠物开始-->
 <div id="pet">
-    <img id="pet-img" src="./max/stand1.png" alt="可拖动的小猫咪" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSI5MCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjRkY5RUJDIi8+PHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+5bCP55S3PC90ZXh0Pjwvc3ZnPg==';">
+    <img id="pet-img" src="https://kirishiqaq.github.io/max/stand1.png" alt="可拖动的小猫咪">
 </div>
 <!--宠物结束-->
 
@@ -434,30 +436,28 @@
 </div>
 
 <script>
-    // 路径检查函数 - 用于调试
-    function checkPaths() {
-        console.log('当前页面URL:', window.location.href);
-        console.log('图片基础路径测试:');
+    // 检查猫咪图片是否可访问
+    const CAT_BASE_URL = 'https://kirishiqaq.github.io/';
 
-        // 测试主要图片路径
-        const testPaths = [
-            './max/stand1.png',
-            'max/stand1.png',
-            '/max/stand1.png',
-            './Maxwell_Who-CatCursor/pointer.ico'
-        ];
-
-        testPaths.forEach(path => {
-            const img = new Image();
-            img.onload = () => console.log(`✓ ${path} 可访问`);
-            img.onerror = () => console.log(`✗ ${path} 无法访问`);
-            img.src = path;
-        });
+    // 先测试一下猫咪图片是否能访问
+    function testImageAccess() {
+        console.log('测试猫咪图片访问...');
+        const testImg = new Image();
+        testImg.onload = function() {
+            console.log('✓ 猫咪图片可以访问:', this.src);
+        };
+        testImg.onerror = function() {
+            console.error('✗ 猫咪图片无法访问:', this.src);
+            console.log('请确保以下路径正确:');
+            console.log('1. https://kirishiqaq.github.io/max/stand1.png');
+            console.log('2. https://kirishiqaq.github.io/max/ 文件夹是否存在');
+        };
+        testImg.src = 'https://kirishiqaq.github.io/max/stand1.png';
     }
 
-    // 页面加载时检查路径
+    // 页面加载时测试
     document.addEventListener('DOMContentLoaded', function() {
-        checkPaths();
+        testImageAccess();
         document.getElementById('cur_year').textContent = new Date().getFullYear();
     });
 
@@ -521,17 +521,21 @@
 
     // 加载图片辅助函数
     function loadImage(path) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             const img = new Image();
-            img.onload = () => resolve(img);
+            img.onload = () => {
+                console.log('图片加载成功:', path);
+                resolve(img);
+            };
             img.onerror = () => {
                 console.error('图片加载失败:', path);
                 // 创建备用图片
                 const fallback = new Image();
-                fallback.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90"><rect width="90" height="90" fill="%23FF9EBC"/><text x="45" y="45" font-family="Arial" font-size="14" fill="white" text-anchor="middle" dy=".3em">小猫</text></svg>`;
+                fallback.src = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSI5MCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjRkY5RUJDIi8+PHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+5bCP55S3PC90ZXh0Pjwvc3ZnPg==`;
                 resolve(fallback);
             };
-            img.src = path;
+            // 使用完整的GitHub Pages URL
+            img.src = CAT_BASE_URL + path;
         });
     }
 
@@ -541,34 +545,32 @@
 
         try {
             // 加载初始图片
-            const fallingImg = await loadImage('./max/falling1.png');
+            const fallingImg = await loadImage('max/falling1.png');
             fallingFrames.push(fallingImg);
 
             // 设置初始显示的图片
-            const initialImg = await loadImage('./max/stand1.png');
+            const initialImg = await loadImage('max/stand1.png');
             document.querySelector('#pet-img').src = initialImg.src;
 
             // 加载动画序列
             for (let i = 1; i < 13; i++) {
-                const frames = [
-                    `./max/walkright${i}.png`,
-                    `./max/walkleft${i}.png`,
-                    `./max/drag${i}.png`,
-                    `./max/fish${i}.png`,
-                    `./max/kiss${i}.png`,
-                    `./max/sleep${i}.png`,
-                    `./max/stand${i}.png`
-                ];
+                const frames = await Promise.all([
+                    loadImage(`max/walkright${i}.png`),
+                    loadImage(`max/walkleft${i}.png`),
+                    loadImage(`max/drag${i}.png`),
+                    loadImage(`max/fish${i}.png`),
+                    loadImage(`max/kiss${i}.png`),
+                    loadImage(`max/sleep${i}.png`),
+                    loadImage(`max/stand${i}.png`)
+                ]);
 
-                const loadedFrames = await Promise.all(frames.map(loadImage));
-
-                RightwalkFrames.push(loadedFrames[0]);
-                LeftwalkFrames.push(loadedFrames[1]);
-                DragFrames.push(loadedFrames[2]);
-                fishFrames.push(loadedFrames[3]);
-                kissFrames.push(loadedFrames[4]);
-                sleepFrames.push(loadedFrames[5]);
-                standFrames.push(loadedFrames[6]);
+                RightwalkFrames.push(frames[0]);
+                LeftwalkFrames.push(frames[1]);
+                DragFrames.push(frames[2]);
+                fishFrames.push(frames[3]);
+                kissFrames.push(frames[4]);
+                sleepFrames.push(frames[5]);
+                standFrames.push(frames[6]);
             }
 
             console.log('图片加载完成！');
