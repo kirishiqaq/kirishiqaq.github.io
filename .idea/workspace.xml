@@ -28,112 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/alternate.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/busy.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/dgn1.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/dgn2.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/handwriting.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/help.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/horz.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/move.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/pointer.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/text.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/unavailable.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Maxwell_Who-CatCursor/vert.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/catindex.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/drag9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/falling1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/fish9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/kiss9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/sleep9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/stand9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkleft9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max/walkright9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/favicon.png" afterDir="false" />
-    </list>
+    <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update 404" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,6 +61,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kirishiqaq/kirishiqaq.github.io.git",
+    "accountId": "1b2e2397-4df2-48d8-9422-43482ab70454"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -668,7 +569,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TodoView">
@@ -721,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add post: SAGAN." />
     <MESSAGE value="refactor:donate.md." />
     <MESSAGE value="add post: UEA." />
     <MESSAGE value="bug fix: get 'new Valine' out of the 'for' loop, see https://github.com/xCss/Valine/issues/136 for details." />
@@ -746,6 +646,7 @@
     <MESSAGE value="paper added" />
     <MESSAGE value="style.css" />
     <MESSAGE value="add post:RAR" />
-    <option name="LAST_COMMIT_MESSAGE" value="add post:RAR" />
+    <MESSAGE value="feat:update 404" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:update 404" />
   </component>
 </project>
