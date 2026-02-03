@@ -9,9 +9,20 @@
     <meta name="author" content="{{ site.author }}">
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 
-    <!-- 猫咪宠物系统样式 -->
-    <link rel="stylesheet" href="./catindex.css">
+    <!-- 将所有CSS内联 -->
     <style>
+        /* 鼠标样式开始 */
+        body {
+            /* 默认箭头 */
+            cursor: url('./Maxwell_Who-CatCursor/pointer.ico'), default;
+        }
+
+        a,
+        img,
+        button {
+            cursor: url('./Maxwell_Who-CatCursor/alternate.ico'), default;
+        }
+
         /* 宠物容器样式 */
         #pet {
             position: fixed;
@@ -30,6 +41,7 @@
             height: 90px;
             pointer-events: none;
             user-select: none;
+            object-fit: contain; /* 确保图片完整显示 */
         }
 
         /* 猫咪的对话框 */
@@ -71,10 +83,8 @@
             left: 50%;
             transform: translateX(-50%);
         }
-    </style>
 
-    <!-- 你原有的404页面样式（完全保留） -->
-    <style>
+        /* 404页面样式 */
         body {
             background-color: #F2F2F2;
             color: #444;
@@ -90,10 +100,9 @@
             flex-direction: column;
             overflow-x: hidden;
             position: relative;
-            /* 移除渐变背景，使用与示例代码一致的背景 */
             background-color: #F2F2F2;
-            height: auto !important; /* 覆盖之前的内联样式 */
-            overflow-y: auto; /* 允许垂直滚动 */
+            height: auto !important;
+            overflow-y: auto;
         }
         .body_container {
             padding: 0 60px;
@@ -103,36 +112,8 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* 确保容器至少占据全屏高度 */
+            min-height: 100vh;
             position: relative;
-        }
-        .error-header-bar {
-            background: #F2F2F2;
-            border-bottom: 1px solid #C2C2C2;
-            padding: 58px 0 0;
-            margin-bottom: 40px;
-        }
-        .error-header-content {
-            max-width: 1150px;
-            margin: 0 auto;
-            padding: 0 60px;
-            position: relative;
-        }
-        .error-site-name {
-            margin-bottom: 40px;
-        }
-        .error-site-name a {
-            font: bold 30px/1.12 "Times New Roman", Georgia, Times, sans-serif;
-            color: #555;
-            text-decoration: none;
-        }
-        .error-site-name a:hover {
-            color: #777;
-        }
-        .error-site-name .description {
-            font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
-            margin: .4em 0 .2em;
-            color: #999;
         }
         .error-container {
             flex: 1;
@@ -160,12 +141,6 @@
             margin: 0 0 15px 0;
             line-height: 1;
             font-family: "Times New Roman", Georgia, Times, serif;
-        }
-        .error-title {
-            font-size: 24px;
-            color: #555;
-            margin: 0 0 15px 0;
-            font-weight: normal;
         }
         .error-message {
             font-size: 16px;
@@ -317,7 +292,7 @@
             font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
             font-size: .9em;
             padding: .8em 0 3.6em;
-            margin-top: auto; /* 确保页脚在底部 */
+            margin-top: auto;
             line-height: 1.5;
             color: #999;
             text-align: center;
@@ -338,9 +313,6 @@
 
         @media (max-width: 768px) {
             .body_container {
-                padding: 0 30px;
-            }
-            .error-header-content {
                 padding: 0 30px;
             }
             #pet {
@@ -368,13 +340,6 @@
         @media (max-width: 480px) {
             .body_container {
                 padding: 0 20px;
-            }
-            .error-header-content {
-                padding: 0 20px;
-            }
-            .error-header-bar {
-                padding: 40px 0 0;
-                margin-bottom: 30px;
             }
             #pet {
                 width: 60px;
@@ -406,7 +371,7 @@
 <body>
 <!--宠物开始-->
 <div id="pet">
-    <img id="pet-img" src="./max/stand1.png">
+    <img id="pet-img" src="./max/stand1.png" alt="可拖动的小猫咪" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MCIgaGVpZ2h0PSI5MCI+PHJlY3Qgd2lkdGg9IjkwIiBoZWlnaHQ9IjkwIiBmaWxsPSIjRkY5RUJDIi8+PHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+5bCP55S3PC90ZXh0Pjwvc3ZnPg==';">
 </div>
 <!--宠物结束-->
 
@@ -469,18 +434,43 @@
 </div>
 
 <script>
+    // 路径检查函数 - 用于调试
+    function checkPaths() {
+        console.log('当前页面URL:', window.location.href);
+        console.log('图片基础路径测试:');
+
+        // 测试主要图片路径
+        const testPaths = [
+            './max/stand1.png',
+            'max/stand1.png',
+            '/max/stand1.png',
+            './Maxwell_Who-CatCursor/pointer.ico'
+        ];
+
+        testPaths.forEach(path => {
+            const img = new Image();
+            img.onload = () => console.log(`✓ ${path} 可访问`);
+            img.onerror = () => console.log(`✗ ${path} 无法访问`);
+            img.src = path;
+        });
+    }
+
+    // 页面加载时检查路径
+    document.addEventListener('DOMContentLoaded', function() {
+        checkPaths();
+        document.getElementById('cur_year').textContent = new Date().getFullYear();
+    });
+
     // 创建 pet 对象
     const pet = {
-        x: 50,   // 宠物初始位置的横坐标 （左下角开始）
+        x: 50,
         y: 50,
-        vx: 1,   // 水平方向上宠物前进的速度
-        vy: 0   // 垂直方向上宠物前进的速度
+        vx: 1,
+        vy: 0
     };
 
-    // -------------------------------------------------------------动作
     // 动作权重
     var actions = {
-        // 普通
         walkleft: 1,
         walkright: 1,
         fish: 1,
@@ -490,21 +480,21 @@
     };
 
     // 存储宠物行走动画帧的数组
-    const LeftwalkFrames = []; // 左走
-    const RightwalkFrames = []; // 右走
-    const DragFrames = [];  // 拖拽
+    const LeftwalkFrames = [];
+    const RightwalkFrames = [];
+    const DragFrames = [];
     const fishFrames = [];
     const kissFrames = [];
     const sleepFrames = [];
     const standFrames = [];
     const fallingFrames = [];
 
-    // 初始化 定时器
+    // 初始化定时器
     var ttt = null;
     var dragTime = null;
     var action = 'stand';
 
-    // 1、将对象中的动作按照权重转换为数组。
+    // 动作列表
     var actionList = Object.keys(actions).map(function (key) {
         return {
             name: key,
@@ -528,56 +518,87 @@
             randomNum -= actionList[i].weight;
         }
     }
-    // -------------------------------------------------------------动作
 
-    const img111 = new Image();
-    img111.src = `./max/falling1.png`;
-    fallingFrames.push(img111);
+    // 加载图片辅助函数
+    function loadImage(path) {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = () => {
+                console.error('图片加载失败:', path);
+                // 创建备用图片
+                const fallback = new Image();
+                fallback.src = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90"><rect width="90" height="90" fill="%23FF9EBC"/><text x="45" y="45" font-family="Arial" font-size="14" fill="white" text-anchor="middle" dy=".3em">小猫</text></svg>`;
+                resolve(fallback);
+            };
+            img.src = path;
+        });
+    }
 
-    // 创建动画序列
-    for (let i = 1; i < 13; i++) {
-        // 将行走动画帧添加到 walkFrames 数组中
-        const img = new Image();
-        img.src = `./max/walkright${i}.png`;
-        RightwalkFrames.push(img);
+    // 加载所有图片
+    async function loadAllImages() {
+        console.log('开始加载猫咪图片...');
 
-        const img2 = new Image();
-        img2.src = `./max/walkleft${i}.png`;
-        LeftwalkFrames.push(img2);
+        try {
+            // 加载初始图片
+            const fallingImg = await loadImage('./max/falling1.png');
+            fallingFrames.push(fallingImg);
 
-        // 其他
-        const img3 = new Image();
-        img3.src = `./max/drag${i}.png`;
-        DragFrames.push(img3);
+            // 设置初始显示的图片
+            const initialImg = await loadImage('./max/stand1.png');
+            document.querySelector('#pet-img').src = initialImg.src;
 
-        const img4 = new Image();
-        img4.src = `./max/fish${i}.png`;
-        fishFrames.push(img4);
+            // 加载动画序列
+            for (let i = 1; i < 13; i++) {
+                const frames = [
+                    `./max/walkright${i}.png`,
+                    `./max/walkleft${i}.png`,
+                    `./max/drag${i}.png`,
+                    `./max/fish${i}.png`,
+                    `./max/kiss${i}.png`,
+                    `./max/sleep${i}.png`,
+                    `./max/stand${i}.png`
+                ];
 
-        const img5 = new Image();
-        img5.src = `./max/kiss${i}.png`;
-        kissFrames.push(img5);
+                const loadedFrames = await Promise.all(frames.map(loadImage));
 
-        const img6 = new Image();
-        img6.src = `./max/sleep${i}.png`;
-        sleepFrames.push(img6);
+                RightwalkFrames.push(loadedFrames[0]);
+                LeftwalkFrames.push(loadedFrames[1]);
+                DragFrames.push(loadedFrames[2]);
+                fishFrames.push(loadedFrames[3]);
+                kissFrames.push(loadedFrames[4]);
+                sleepFrames.push(loadedFrames[5]);
+                standFrames.push(loadedFrames[6]);
+            }
 
-        const img7 = new Image();
-        img7.src = `./max/stand${i}.png`;
-        standFrames.push(img7);
+            console.log('图片加载完成！');
+            console.log('左走帧数:', LeftwalkFrames.length);
+            console.log('右走帧数:', RightwalkFrames.length);
+            console.log('站立帧数:', standFrames.length);
+
+            // 启动宠物循环
+            loop();
+
+        } catch (error) {
+            console.error('图片加载过程中出错:', error);
+        }
     }
 
     // 绘制宠物
     function drawPet(anyFrames = RightwalkFrames) {
-        const frameIndex = Math.floor(Date.now() / 100) % anyFrames.length;  // 计算当前应该绘制的动画帧的索引
-        const img = anyFrames[frameIndex]; // 获取当前应该绘制的动画帧
+        if (anyFrames.length === 0) return;
 
-        document.querySelector('#pet img').src = img.src;  // 更新宠物的显示图像
+        const frameIndex = Math.floor(Date.now() / 100) % anyFrames.length;
+        const img = anyFrames[frameIndex];
+
+        if (img && img.src) {
+            document.querySelector('#pet img').src = img.src;
+        }
     }
 
     // 更新宠物位置
     function updatePet() {
-        pet.x += pet.vx;   // 更新宠物在水平方向的位置
+        pet.x += pet.vx;
 
         // 超出屏幕左边
         if (pet.x < 0) {
@@ -588,11 +609,11 @@
             action = 'walkleft'
         }
 
-        petDiv.style.left = pet.x + 'px';   // 更新宠物所在 div 元素的横坐标位置
+        petDiv.style.left = pet.x + 'px';
         petDiv.style.bottom = pet.y + 'px';
     }
 
-    // ----------------------------------------------------------------------处理用户交互
+    // 处理用户交互
     const petDiv = document.querySelector('#pet');
     const speechBubble = document.getElementById('catSpeech');
     let speechTimeout;
@@ -607,11 +628,9 @@
     const petImg = document.querySelector('#pet-img');
     petImg.style.pointerEvents = 'none';
 
-    var isDragging = false;   // 标记是否正在拖拽中
-    var diffX = 0;    // 鼠标指针与盒子左上角的偏移量
+    var isDragging = false;
+    var diffX = 0;
     var diffY = 0;
-
-    let animationId = null;
 
     // 猫咪对话框功能
     function showSpeechBubble() {
@@ -646,17 +665,15 @@
     // 鼠标按下
     petDiv.addEventListener('mousedown', function (event) {
         action = '';
-        clearInterval(petTimer); // 暂停宠物行动的定时器
+        clearInterval(petTimer);
 
         if (event.target === petDiv) {
             isDragging = true;
             diffX = event.clientX - petDiv.offsetLeft;
             diffY = event.clientY - petDiv.offsetTop;
 
-            // 显示对话框
             showSpeechBubble();
 
-            // 拖拽定时器
             dragTime = setInterval(function drag() {
                 drawPet(DragFrames);
             }, 100);
@@ -688,7 +705,7 @@
                 action = randomAction();
             }, 3000);
 
-            // 超出屏幕 回到 指定位置
+            // 超出屏幕回到指定位置
             if (pet.y < 0 || pet.y + petDiv.clientHeight > window.innerHeight || pet.x + petDiv.clientWidth > window.innerWidth || pet.x < 0) {
                 pet.x = Math.max(20, Math.random() * (window.innerWidth - petDiv.clientWidth - 40));
                 pet.y = Math.max(20, Math.random() * (window.innerHeight - petDiv.clientHeight - 40));
@@ -696,12 +713,11 @@
                 petDiv.style.top = pet.y + 'px';
             }
 
-            // 显示下落 图片
             drawPet(fallingFrames);
         }
     });
 
-    // 宠物行动的定时器，每 3 秒执行一次
+    // 宠物行动的定时器
     var petTimer = setInterval(function name() {
         action = randomAction();
     }, 3000);
@@ -713,41 +729,27 @@
         }
     });
 
-    // ----------------------------------------------------------------------
     // 主循环
     function loop() {
         if (action == 'walkleft') {
             pet.vx = -0.5;
             updatePet();
             drawPet(LeftwalkFrames);
-        }
-
-        if (action == 'walkright') {
+        } else if (action == 'walkright') {
             pet.vx = 0.5;
             updatePet();
             drawPet(RightwalkFrames);
-        }
-
-        if (action == 'fish') {
+        } else if (action == 'fish') {
             drawPet(fishFrames);
-        }
-
-        if (action == 'kiss') {
+        } else if (action == 'kiss') {
             drawPet(kissFrames);
-        }
-
-        if (action == 'sleep') {
+        } else if (action == 'sleep') {
             drawPet(sleepFrames);
-        }
-
-        if (action == 'stand') {
+        } else if (action == 'stand') {
             drawPet(standFrames);
         }
         requestAnimationFrame(loop);
     }
-
-    // 启动循环
-    loop();
 
     // 窗口大小变化时防止猫咪跑出屏幕
     window.addEventListener('resize', function() {
@@ -758,10 +760,8 @@
         updateSpeechBubblePosition();
     });
 
-    // 自动更新页脚年份
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('cur_year').textContent = new Date().getFullYear();
-    });
+    // 页面加载完成后开始加载图片
+    window.addEventListener('load', loadAllImages);
 </script>
 </body>
 </html>
