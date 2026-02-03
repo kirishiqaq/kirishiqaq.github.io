@@ -1,14 +1,767 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<meta name="keywords" content="个人主页, kirishiqaq, 网址导航"/>
-<meta name="description" content="kirishiqaq，个人主页"/>
-<meta name="author" content="Huoty"/>
-<title>kirishi's blog</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <meta name="description" content="The page you requested does not exist">
+    <meta name="keywords" content="404, page not found">
+    <meta name="author" content="{{ site.author }}">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+
+    <!-- 猫咪宠物系统样式 -->
+    <link rel="stylesheet" href="./catindex.css">
+    <style>
+        /* 宠物容器样式 */
+        #pet {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            z-index: 9999;
+            left: 50px;
+            bottom: 50px;
+            cursor: url('./Maxwell_Who-CatCursor/alternate.ico'), default;
+            display: flex;
+            pointer-events: auto;
+        }
+
+        #pet img {
+            width: 90px;
+            height: 90px;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* 猫咪的对话框 */
+        .cat-speech-bubble {
+            position: absolute;
+            background: white;
+            padding: 10px 16px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 2px solid #FF9EBC;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #555;
+            max-width: 180px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 9999;
+            font-family: sans-serif;
+        }
+        .cat-speech-bubble:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 8px;
+            border-color: white transparent transparent transparent;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .cat-speech-bubble:before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 8px;
+            border-color: #FF9EBC transparent transparent transparent;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+
+    <!-- 你原有的404页面样式（完全保留） -->
+    <style>
+        body {
+            background-color: #F2F2F2;
+            color: #444;
+            font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 14px;
+            line-height: 1.77;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+            /* 移除渐变背景，使用与示例代码一致的背景 */
+            background-color: #F2F2F2;
+            height: auto !important; /* 覆盖之前的内联样式 */
+            overflow-y: auto; /* 允许垂直滚动 */
+        }
+        .body_container {
+            padding: 0 60px;
+            max-width: 1150px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 确保容器至少占据全屏高度 */
+            position: relative;
+        }
+        .error-header-bar {
+            background: #F2F2F2;
+            border-bottom: 1px solid #C2C2C2;
+            padding: 58px 0 0;
+            margin-bottom: 40px;
+        }
+        .error-header-content {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 0 60px;
+            position: relative;
+        }
+        .error-site-name {
+            margin-bottom: 40px;
+        }
+        .error-site-name a {
+            font: bold 30px/1.12 "Times New Roman", Georgia, Times, sans-serif;
+            color: #555;
+            text-decoration: none;
+        }
+        .error-site-name a:hover {
+            color: #777;
+        }
+        .error-site-name .description {
+            font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+            margin: .4em 0 .2em;
+            color: #999;
+        }
+        .error-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .error-content {
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+        .error-header {
+            margin-bottom: 30px;
+        }
+        .error-code {
+            font-size: 48px;
+            font-weight: bold;
+            color: #C2C2C2;
+            margin: 0 0 15px 0;
+            line-height: 1;
+            font-family: "Times New Roman", Georgia, Times, serif;
+        }
+        .error-title {
+            font-size: 24px;
+            color: #555;
+            margin: 0 0 15px 0;
+            font-weight: normal;
+        }
+        .error-message {
+            font-size: 16px;
+            color: #666;
+            margin: 0 0 25px 0;
+            line-height: 1.77;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cat-eaten-message {
+            background: #fff;
+            border: 2px dashed #FF9EBC;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px auto 40px;
+            max-width: 400px;
+            position: relative;
+        }
+        .cat-eaten-text {
+            font-size: 18px;
+            color: #555;
+            margin: 0 0 10px 0;
+            font-weight: 500;
+        }
+        .cat-eaten-subtext {
+            font-size: 14px;
+            color: #999;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .cat-paw-print {
+            position: absolute;
+            color: #FF9EBC;
+            font-size: 24px;
+            opacity: 0.3;
+        }
+        .cat-paw-print:nth-child(1) {
+            top: 15px;
+            left: 15px;
+            transform: rotate(45deg);
+        }
+        .cat-paw-print:nth-child(2) {
+            bottom: 15px;
+            right: 15px;
+            transform: rotate(135deg);
+        }
+        .error-actions {
+            margin-bottom: 40px;
+        }
+        .error-actions a {
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 8px;
+            color: #444;
+            text-decoration: none;
+            border: 1px solid #C2C2C2;
+            background-color: #F2F2F2;
+            font-size: 14px;
+            line-height: 1.5;
+            transition: all 0.2s ease;
+            border-radius: 4px;
+        }
+        .error-actions a:hover {
+            color: #444;
+            border-bottom-color: #444;
+            transform: translateY(-2px);
+        }
+        .error-actions a.primary {
+            background-color: #F2F2F2;
+            border: 1px solid #C2C2C2;
+            border-bottom-color: #444;
+        }
+        .error-recommendations {
+            background: transparent;
+            padding: 0;
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+        }
+        .error-recommendations h3 {
+            color: #555858;
+            font-size: 18px;
+            line-height: 2.7;
+            margin: 0 0 30px 0;
+            border-bottom: 1px solid #ddd;
+            font-weight: normal;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        .post-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: left;
+            transition: all 0.2s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-color: #ddd;
+        }
+        .post-card-header {
+            margin-bottom: 15px;
+            flex-shrink: 0;
+        }
+        .post-card a {
+            color: #01579f;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.4;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.2s ease;
+        }
+        .post-card a:hover {
+            color: #0288d1;
+            text-decoration: underline;
+        }
+        .post-date {
+            color: #999;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 12px;
+            font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+        }
+        .post-excerpt {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-top: 10px;
+            font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+        }
+        .error-footer {
+            font-family: "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+            font-size: .9em;
+            padding: .8em 0 3.6em;
+            margin-top: auto; /* 确保页脚在底部 */
+            line-height: 1.5;
+            color: #999;
+            text-align: center;
+            border-top: 1px solid #C2C2C2;
+            width: 100%;
+            background-color: #F2F2F2;
+            position: relative;
+            z-index: 10;
+        }
+        .error-footer a {
+            color: #6E7173;
+            text-decoration: none;
+            transition: all .1s ease-in;
+        }
+        .error-footer a:hover {
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .body_container {
+                padding: 0 30px;
+            }
+            .error-header-content {
+                padding: 0 30px;
+            }
+            #pet {
+                width: 80px;
+                height: 80px;
+                left: 20px;
+                bottom: 20px;
+            }
+            #pet img {
+                width: 70px;
+                height: 70px;
+            }
+            .error-container {
+                padding: 15px 0 30px;
+            }
+            .recommendations-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+            .cat-eaten-message {
+                margin: 20px auto 30px;
+                padding: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            .body_container {
+                padding: 0 20px;
+            }
+            .error-header-content {
+                padding: 0 20px;
+            }
+            .error-header-bar {
+                padding: 40px 0 0;
+                margin-bottom: 30px;
+            }
+            #pet {
+                width: 60px;
+                height: 60px;
+                left: 10px;
+                bottom: 10px;
+            }
+            #pet img {
+                width: 50px;
+                height: 50px;
+            }
+            .error-container {
+                padding: 10px 0 20px;
+            }
+            .error-recommendations {
+                margin-top: 30px;
+            }
+            .error-recommendations h3 {
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .post-card {
+                padding: 18px;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="https://my.xfltd.org/#/register?code=O7UsezuV" homePageName="回到首页"></script>
+<!--宠物开始-->
+<div id="pet">
+    <img id="pet-img" src="./max/stand1.png">
+</div>
+<!--宠物结束-->
+
+<!-- 猫咪对话框 -->
+<div class="cat-speech-bubble" id="catSpeech"></div>
+
+<!-- 你原有的404页面主体结构 -->
+<div class="body_container">
+    <div class="error-container">
+        <div class="error-content">
+            <div class="error-header">
+                <h6 class="error-code">404 :( Page Not Found</h6>
+                <p class="error-message">The page you are looking for has wandered off somewhere...</p>
+            </div>
+
+            <div class="cat-eaten-message">
+                <div class="cat-paw-print">🐾</div>
+                <div class="cat-paw-print">🐾</div>
+                <p class="cat-eaten-subtext">内容被小猫吃掉了 qwq<br>你可以拖动那只小猫咪来逗它玩！</p>
+            </div>
+
+            <div class="error-actions">
+                <a href="https://kirishiqaq.com/" class="primary">回到主页</a>
+                <a href="https://kirishiqaq.com/archives/">浏览文章</a>
+            </div>
+
+            <div class="error-recommendations">
+                <h3>推荐文章</h3>
+                <div class="recommendations-grid">
+                    <div class="post-card">
+                        <div class="post-card-header">
+                            <a href="https://kirishiqaq.com/2025/10/18/死/">Reflections on Death</a>
+                            <span class="post-date">2025-10-18</span>
+                        </div>
+                        <div class="post-excerpt">Nobody Care</div>
+                    </div>
+                    <div class="post-card">
+                        <div class="post-card-header">
+                            <a href="https://kirishiqaq.com/2025/10/12/存在与沉沦与未完成/">Decadence/Incompletion</a>
+                            <span class="post-date">2025-10-12</span>
+                        </div>
+                        <div class="post-excerpt">Undefined</div>
+                    </div>
+                    <div class="post-card">
+                        <div class="post-card-header">
+                            <a href="https://kirishiqaq.com/2025/09/29/常识改变/">Common Sense Changes</a>
+                            <span class="post-date">2025-09-29</span>
+                        </div>
+                        <div class="post-excerpt">Nobody Know</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="error-footer">
+        Copyright &copy; 2006-<span id="cur_year"></span> <a href="https://kirishiqaq.com">kirishi</a> - All Rights Reserved.
+        Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a> @ <a href="https://github.com/kirishiqaq/kirishiqaq.github.io" target="_blank">Github.com</a>
+    </div>
+</div>
+
+<script>
+    // 创建 pet 对象
+    const pet = {
+        x: 50,   // 宠物初始位置的横坐标 （左下角开始）
+        y: 50,
+        vx: 1,   // 水平方向上宠物前进的速度
+        vy: 0   // 垂直方向上宠物前进的速度
+    };
+
+    // -------------------------------------------------------------动作
+    // 动作权重
+    var actions = {
+        // 普通
+        walkleft: 1,
+        walkright: 1,
+        fish: 1,
+        sleep: 1,
+        kiss: 1,
+        stand: 1,
+    };
+
+    // 存储宠物行走动画帧的数组
+    const LeftwalkFrames = []; // 左走
+    const RightwalkFrames = []; // 右走
+    const DragFrames = [];  // 拖拽
+    const fishFrames = [];
+    const kissFrames = [];
+    const sleepFrames = [];
+    const standFrames = [];
+    const fallingFrames = [];
+
+    // 初始化 定时器
+    var ttt = null;
+    var dragTime = null;
+    var action = 'stand';
+
+    // 1、将对象中的动作按照权重转换为数组。
+    var actionList = Object.keys(actions).map(function (key) {
+        return {
+            name: key,
+            weight: actions[key]
+        };
+    }).reduce(function (prev, curr) {
+        return prev.concat(curr);
+    }, []);
+
+    // 根据权重随机选择动作
+    function randomAction() {
+        var totalWeight = actionList.reduce(function (prev, curr) {
+            return prev + curr.weight;
+        }, 0);
+        var randomNum = Math.random() * totalWeight;
+
+        for (var i = 0; i < actionList.length; i++) {
+            if (randomNum <= actionList[i].weight) {
+                return actionList[i].name;
+            }
+            randomNum -= actionList[i].weight;
+        }
+    }
+    // -------------------------------------------------------------动作
+
+    const img111 = new Image();
+    img111.src = `./max/falling1.png`;
+    fallingFrames.push(img111);
+
+    // 创建动画序列
+    for (let i = 1; i < 13; i++) {
+        // 将行走动画帧添加到 walkFrames 数组中
+        const img = new Image();
+        img.src = `./max/walkright${i}.png`;
+        RightwalkFrames.push(img);
+
+        const img2 = new Image();
+        img2.src = `./max/walkleft${i}.png`;
+        LeftwalkFrames.push(img2);
+
+        // 其他
+        const img3 = new Image();
+        img3.src = `./max/drag${i}.png`;
+        DragFrames.push(img3);
+
+        const img4 = new Image();
+        img4.src = `./max/fish${i}.png`;
+        fishFrames.push(img4);
+
+        const img5 = new Image();
+        img5.src = `./max/kiss${i}.png`;
+        kissFrames.push(img5);
+
+        const img6 = new Image();
+        img6.src = `./max/sleep${i}.png`;
+        sleepFrames.push(img6);
+
+        const img7 = new Image();
+        img7.src = `./max/stand${i}.png`;
+        standFrames.push(img7);
+    }
+
+    // 绘制宠物
+    function drawPet(anyFrames = RightwalkFrames) {
+        const frameIndex = Math.floor(Date.now() / 100) % anyFrames.length;  // 计算当前应该绘制的动画帧的索引
+        const img = anyFrames[frameIndex]; // 获取当前应该绘制的动画帧
+
+        document.querySelector('#pet img').src = img.src;  // 更新宠物的显示图像
+    }
+
+    // 更新宠物位置
+    function updatePet() {
+        pet.x += pet.vx;   // 更新宠物在水平方向的位置
+
+        // 超出屏幕左边
+        if (pet.x < 0) {
+            action = 'walkright'
+        }
+        // 超出屏幕右边
+        if (pet.x + petDiv.clientWidth > window.innerWidth) {
+            action = 'walkleft'
+        }
+
+        petDiv.style.left = pet.x + 'px';   // 更新宠物所在 div 元素的横坐标位置
+        petDiv.style.bottom = pet.y + 'px';
+    }
+
+    // ----------------------------------------------------------------------处理用户交互
+    const petDiv = document.querySelector('#pet');
+    const speechBubble = document.getElementById('catSpeech');
+    let speechTimeout;
+
+    // 设置宠物初始位置
+    pet.x = Math.max(20, Math.random() * (window.innerWidth - petDiv.clientWidth - 40));
+    pet.y = Math.max(20, Math.random() * (window.innerHeight - petDiv.clientHeight - 40));
+    petDiv.style.left = pet.x + 'px';
+    petDiv.style.top = pet.y + 'px';
+
+    // 禁用图片点击
+    const petImg = document.querySelector('#pet-img');
+    petImg.style.pointerEvents = 'none';
+
+    var isDragging = false;   // 标记是否正在拖拽中
+    var diffX = 0;    // 鼠标指针与盒子左上角的偏移量
+    var diffY = 0;
+
+    let animationId = null;
+
+    // 猫咪对话框功能
+    function showSpeechBubble() {
+        const messages = [
+            "喵~ 页面被我吃掉啦！",
+            "别找了，我来陪你玩～",
+            "鼠标抓住我了！快放手！",
+            "这是我的新领地🐾",
+            "404？我可没看见什么页面",
+            "拖着我走好不好玩呀？"
+        ];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        speechBubble.textContent = randomMessage;
+        speechBubble.style.opacity = '1';
+
+        updateSpeechBubblePosition();
+        speechBubble.style.display = 'block';
+
+        clearTimeout(speechTimeout);
+        speechTimeout = setTimeout(() => {
+            speechBubble.style.opacity = '0';
+            setTimeout(() => { speechBubble.style.display = 'none'; }, 300);
+        }, 2500);
+    }
+
+    function updateSpeechBubblePosition() {
+        const petRect = petDiv.getBoundingClientRect();
+        speechBubble.style.left = (petRect.left + petDiv.offsetWidth / 2 - speechBubble.offsetWidth / 2) + 'px';
+        speechBubble.style.top = (petRect.top - speechBubble.offsetHeight - 10) + 'px';
+    }
+
+    // 鼠标按下
+    petDiv.addEventListener('mousedown', function (event) {
+        action = '';
+        clearInterval(petTimer); // 暂停宠物行动的定时器
+
+        if (event.target === petDiv) {
+            isDragging = true;
+            diffX = event.clientX - petDiv.offsetLeft;
+            diffY = event.clientY - petDiv.offsetTop;
+
+            // 显示对话框
+            showSpeechBubble();
+
+            // 拖拽定时器
+            dragTime = setInterval(function drag() {
+                drawPet(DragFrames);
+            }, 100);
+        }
+    });
+
+    // 鼠标拖动
+    document.addEventListener('mousemove', function (event) {
+        if (isDragging === true) {
+            pet.x = event.clientX - diffX;
+            pet.y = event.clientY - diffY;
+
+            petDiv.style.left = pet.x + 'px';
+            petDiv.style.top = pet.y + 'px';
+
+            updateSpeechBubblePosition();
+        }
+    });
+
+    // 鼠标抬起
+    document.addEventListener('mouseup', function (event) {
+        if (isDragging === true) {
+            clearInterval(ttt);
+            clearInterval(dragTime);
+            isDragging = false;
+            action = 'stand';
+
+            ttt = setInterval(function name() {
+                action = randomAction();
+            }, 3000);
+
+            // 超出屏幕 回到 指定位置
+            if (pet.y < 0 || pet.y + petDiv.clientHeight > window.innerHeight || pet.x + petDiv.clientWidth > window.innerWidth || pet.x < 0) {
+                pet.x = Math.max(20, Math.random() * (window.innerWidth - petDiv.clientWidth - 40));
+                pet.y = Math.max(20, Math.random() * (window.innerHeight - petDiv.clientHeight - 40));
+                petDiv.style.left = pet.x + 'px';
+                petDiv.style.top = pet.y + 'px';
+            }
+
+            // 显示下落 图片
+            drawPet(fallingFrames);
+        }
+    });
+
+    // 宠物行动的定时器，每 3 秒执行一次
+    var petTimer = setInterval(function name() {
+        action = randomAction();
+    }, 3000);
+
+    // 点击猫咪也触发对话
+    petDiv.addEventListener('click', function(e) {
+        if (!isDragging) {
+            showSpeechBubble();
+        }
+    });
+
+    // ----------------------------------------------------------------------
+    // 主循环
+    function loop() {
+        if (action == 'walkleft') {
+            pet.vx = -0.5;
+            updatePet();
+            drawPet(LeftwalkFrames);
+        }
+
+        if (action == 'walkright') {
+            pet.vx = 0.5;
+            updatePet();
+            drawPet(RightwalkFrames);
+        }
+
+        if (action == 'fish') {
+            drawPet(fishFrames);
+        }
+
+        if (action == 'kiss') {
+            drawPet(kissFrames);
+        }
+
+        if (action == 'sleep') {
+            drawPet(sleepFrames);
+        }
+
+        if (action == 'stand') {
+            drawPet(standFrames);
+        }
+        requestAnimationFrame(loop);
+    }
+
+    // 启动循环
+    loop();
+
+    // 窗口大小变化时防止猫咪跑出屏幕
+    window.addEventListener('resize', function() {
+        pet.x = Math.max(0, Math.min(pet.x, window.innerWidth - petDiv.clientWidth));
+        pet.y = Math.max(0, Math.min(pet.y, window.innerHeight - petDiv.clientHeight));
+        petDiv.style.left = pet.x + 'px';
+        petDiv.style.top = pet.y + 'px';
+        updateSpeechBubblePosition();
+    });
+
+    // 自动更新页脚年份
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('cur_year').textContent = new Date().getFullYear();
+    });
+</script>
 </body>
 </html>

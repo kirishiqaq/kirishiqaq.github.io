@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,12 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="style.css">
-      <change afterPath="$PROJECT_DIR$/_posts/2025-07-17-暑期小记1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update 404" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +61,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kirishiqaq/kirishiqaq.github.io.git",
+    "accountId": "1b2e2397-4df2-48d8-9422-43482ab70454"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -74,17 +78,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feature__anothercomputer",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hanzeyu.kirshi/Github/kirishiqaq.github.io",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/imgs" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets/imgs" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/live2dw" />
       <recent name="$PROJECT_DIR$/assets/css" />
@@ -94,12 +103,13 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.post.html">
+  <component name="RunManager">
     <configuration name="post.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/oukohou.github.io/_layouts/post.html">
       <method v="2" />
     </configuration>
     <configuration name="resize_image" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="oukohou.github.io" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -121,13 +131,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.post.html" />
+      <item itemvalue="Python.resize_image" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.post.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -564,7 +569,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="TodoView">
@@ -617,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add post: SAGAN." />
     <MESSAGE value="refactor:donate.md." />
     <MESSAGE value="add post: UEA." />
     <MESSAGE value="bug fix: get 'new Valine' out of the 'for' loop, see https://github.com/xCss/Valine/issues/136 for details." />
@@ -642,32 +646,7 @@
     <MESSAGE value="paper added" />
     <MESSAGE value="style.css" />
     <MESSAGE value="add post:RAR" />
-    <option name="LAST_COMMIT_MESSAGE" value="add post:RAR" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="232" y="384" width="1147" height="626" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1710321499372">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="232" y="384" width="1147" height="626" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1710321499372" />
-    <state x="488" y="69" width="1001" height="967" key="CommitChangelistDialog2" timestamp="1715648268905">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="488" y="69" width="1001" height="967" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1715648268905" />
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1715851580888">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1715851580888" />
-    <state x="813" y="450" key="GitRewordDialog" timestamp="1713454116711">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="813" y="450" key="GitRewordDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1713454116711" />
-    <state x="475" y="187" key="SettingsEditor" timestamp="1717569209015">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="475" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1717569209015" />
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1715648271387">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="588" y="287" width="800" height="531" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1715648271387" />
+    <MESSAGE value="feat:update 404" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat:update 404" />
   </component>
 </project>

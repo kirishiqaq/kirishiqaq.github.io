@@ -1,0 +1,60 @@
+/* 鼠标样式开始 */
+body {
+    /* 默认箭头 */
+    cursor: url('./Maxwell_Who-CatCursor/pointer.ico'),
+        default;
+}
+
+a,
+img,
+button {
+    cursor: url(./Maxwell_Who-CatCursor/alternate.ico),
+        default;
+}
+
+html {
+    
+    /* 文字输入 */
+    cursor: url('path/to/text.ico'),
+        text;
+
+    /* 链接 */
+    cursor: url('path/to/link.ico'),
+        pointer;
+
+    /* 移动 */
+    cursor: url('path/to/move.ico'),
+        move;
+
+    /* 拖拽 */
+    cursor: url('path/to/grab.ico'),
+        grab;
+
+    /* 关闭 */
+    cursor: url('path/to/not-allowed.ico'),
+        not-allowed;
+
+    /* 等待/加载 */
+    cursor: url('./Maxwell_Who-CatCursor/busy.ico'),
+        wait;
+
+    /* 改变大小 */
+    cursor: url('path/to/resize.ico'),
+        col-resize;
+    /* 左右调整 */
+    cursor: url('path/to/resize.ico'),
+        row-resize;
+    /* 上下调整 */
+    cursor: url('path/to/resize.ico'),
+        nwse-resize;
+    /* 左上到右下调整 */
+    cursor: url('path/to/resize.ico'),
+        nesw-resize;
+    /* 右上到左下调整 */
+    cursor: url('path/to/resize.ico'),
+        ew-resize;
+    /* 左右调整 */
+    cursor: url('path/to/resize.ico'),
+        ns-resize;
+    /* 上下调整 */
+}
