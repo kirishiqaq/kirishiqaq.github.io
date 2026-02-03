@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Responsive Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-container {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .device-frame {
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin: 10px;
+            display: inline-block;
+            overflow: hidden;
+            background: white;
+        }
+        .device-header {
+            background: #333;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .device-content {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .test-info {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>404页面响应式测试</h1>
+    
+    <div class="test-container">
+        <h2>测试说明</h2>
+        <div class="test-info">
+            <p><strong>测试目标：</strong>确保404页面在各种设备和窗口大小下都能在首屏内完整显示</p>
+            <p><strong>测试设备：</strong>桌面、平板、手机</p>
+            <p><strong>测试要点：</strong></p>
+            <ul>
+                <li>✅ 背景色与主站完全一致 (#F2F2F2)</li>
+                <li>✅ 字体和颜色与主站保持一致</li>
+                <li>✅ 响应式字体大小 (clamp函数)</li>
+                <li>✅ 优化的间距和布局</li>
+                <li>✅ 移动端友好的触摸目标</li>
+                <li>✅ 计算好的视口高度，确保首屏显示完整</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>桌面端测试 (1920×1080)</h2>
+        <div class="device-frame" style="width: 800px; height: 600px;">
+            <div class="device-header">Desktop - 1920×1080</div>
+            <iframe class="device-content" src="/404.html"></iframe>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>平板端测试 (768×1024)</h2>
+        <div class="device-frame" style="width: 768px; height: 1024px;">
+            <div class="device-header">Tablet - 768×1024</div>
+            <iframe class="device-content" src="/404.html"></iframe>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>手机端测试 (375×812)</h2>
+        <div class="device-frame" style="width: 375px; height: 812px;">
+            <div class="device-header">Mobile - 375×812</div>
+            <iframe class="device-content" src="/404.html"></iframe>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>小屏手机测试 (320×568)</h2>
+        <div class="device-frame" style="width: 320px; height: 568px;">
+            <div class="device-header">Small Mobile - 320×568</div>
+            <iframe class="device-content" src="/404.html"></iframe>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>响应式断点测试</h2>
+        <p>调整浏览器窗口大小，测试以下断点：</p>
+        <ul>
+            <li><strong>768px:</strong> 平板到手机的转换点</li>
+            <li><strong>480px:</strong> 中等手机屏幕</li>
+            <li><strong>320px:</strong> 小屏幕手机</li>
+        </ul>
+    </div>
+
+    <div class="test-container">
+        <h2>性能优化特性</h2>
+        <ul>
+            <li>✅ <strong>CSS clamp()函数：</strong>字体大小根据视口自动调整</li>
+            <li>✅ <strong>Flexbox布局：</strong>确保内容垂直居中</li>
+            <li>✅ <strong>计算高度：</strong><code>min-height: calc(100vh - 300px)</code> 确保内容在首屏内</li>
+            <li>✅ <strong>响应式间距：</strong>根据屏幕大小调整padding和margin</li>
+            <li>✅ <strong>触摸友好：</strong>按钮最小点击区域44×44像素</li>
+        </ul>
+    </div>
+
+    <script>
+        // 添加一些交互测试功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframes = document.querySelectorAll('.device-content');
+            
+            // 为每个iframe添加加载完成提示
+            iframes.forEach(iframe => {
+                iframe.addEventListener('load', function() {
+                    console.log('404页面加载完成');
+                    
+                    // 检查内容是否溢出
+                    try {
+                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                        const contentHeight = iframeDoc.documentElement.scrollHeight;
+                        const viewportHeight = iframe.clientHeight;
+                        
+                        if (contentHeight > viewportHeight) {
+                            console.warn('内容可能超出视口:', {
+                                device: iframe.parentElement.querySelector('.device-header').textContent,
+                                contentHeight,
+                                viewportHeight,
+                                overflow: contentHeight - viewportHeight
+                            });
+                        } else {
+                            console.log('✅ 内容完美适配视口:', {
+                                device: iframe.parentElement.querySelector('.device-header').textContent,
+                                contentHeight,
+                                viewportHeight
+                            });
+                        }
+                    } catch (e) {
+                        console.log('无法访问iframe内容（跨域限制）');
+                    }
+                });
+            });
+            
+            console.log('404页面响应式测试已准备就绪');
+        });
+    </script>
+</body>
+</html>
