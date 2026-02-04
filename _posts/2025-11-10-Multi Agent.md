@@ -36,7 +36,7 @@ tags:   [Agent]
 ### 多智能体概念框架
 #### 核心概念
 
-![图1](/images/post251110/img.png)
+![图1](/images/post20251110/img.png)
 
 每个智能体由作为神经处理器的语言模型 m、当前目标 o、环境 e、输入感知 x 和相应的输出/行动 y 组成。核心焦点是协作渠道 C，它促进了智能体之间的协调和编排。
 
@@ -44,7 +44,7 @@ tags:   [Agent]
 
 可分为几类：
 
-![图2](/images/post251110/img1.png)
+![图2](/images/post20251110/img1.png)
 
 每个智能体 a 通过其系统提示 r 配备了不同的工具或能力。
 
@@ -56,7 +56,7 @@ tags:   [Agent]
 
 Agent之间通信方式：
 
-![图3](/images/post251110/img2.png)
+![图3](/images/post20251110/img2.png)
 
 •图 (a)，展示了中心化结构，该结构可被分为两种类型。
 
@@ -85,11 +85,11 @@ Agent之间通信方式：
 #### 应用场景
 来自AutoGen:
 
-![图4](/images/post251110/img3.png)
+![图4](/images/post20251110/img3.png)
 
 一个示例：
 
-![图5](/images/post251110/img4.png)
+![图5](/images/post20251110/img4.png)
 
 ### 架构类型
 #### 常见的多智能体架构类型
@@ -173,7 +173,7 @@ Agent之间通信方式：
 #### 多Agent编排方式
 ##### 顺序业务流程 (Sequential Orchestration)
 
-![图6](/images/post251110/img5.png)
+![图6](/images/post20251110/img5.png)
 
 这是最直接的一种多代理协作方式，类似于工厂里的流水线。
 
@@ -201,7 +201,7 @@ Agent之间通信方式：
 
 ##### 并发业务流程 (Concurrent Orchestration)
 
-![图7](/images/post251110/img6.png)
+![图7](/images/post20251110/img6.png)
 
 当任务的某些部分可以被独立、并行处理时，采用并发模式可以显著提高效率。
 
@@ -230,7 +230,7 @@ Agent之间通信方式：
 •**适用场景**：任务可以被分解为多个互不依赖的子任务，通过并行处理来缩短总耗时。
 ##### 群聊业务流程 (Group Chat Orchestration)
 
-![图8](/images/post251110/img7.png)
+![图8](/images/post20251110/img7.png)
 
 这是最灵活、最动态但也最复杂的协作方式，它模拟了一个人类团队围绕一个问题进行开放式讨论和协作的过程。
 
@@ -491,11 +491,11 @@ Planner–Executor + 审核者（Supervisor）+ RAG与工具的双轨，并以La
 
 预构建模版：
 
-![图9](/images/post251110/img8.png)
+![图9](/images/post20251110/img8.png)
 
 LangGraph RAG框架：
 
-![图10](/images/post251110/img9.png)
+![图10](/images/post20251110/img9.png)
 
 参考：
 
