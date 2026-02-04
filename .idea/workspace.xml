@@ -29,16 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update posts">
-      <change afterPath="$PROJECT_DIR$/_posts/2025-11-22-RAG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20251122/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2025-11-24-DeFi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2025-11-20-MCP设计原则.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-11-20-MCP设计原则.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -589,7 +581,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TodoView">
