@@ -3,7 +3,7 @@ layout: post
 title:  "多智能体探索分析"
 date:   2025-11-10 11:00:00 +0800--
 categories: [技术杂谈]
-tags:   [MultiAgent]
+tags:   [Agent]
 ---
 ### 写在前面：
 

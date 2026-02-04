@@ -29,11 +29,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update 404">
-      <change beforePath="$PROJECT_DIR$/_includes/widgets/post_toc" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/widgets/post_toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2025-11-15-A2A.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20251115/img_8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2025-11-10-Multi Agent.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-11-10-Multi Agent.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/create-post.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/create-post.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +126,7 @@
       <recent name="$PROJECT_DIR$/_images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.resize_image">
+  <component name="RunManager">
     <configuration name="post.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/oukohou.github.io/_layouts/post.html">
       <method v="2" />
     </configuration>
@@ -584,7 +592,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="233" />
+    <option name="localTasksCounter" value="234" />
     <servers />
   </component>
   <component name="TodoView">
