@@ -1232,12 +1232,30 @@ table tr:nth-child(2n) {
     display: none;
 }
 
+/* 确保文章目录可见 */
 .post-toc {
-
-ul {
-    overflow: auto;
+    display: block !important;
+    position: sticky;
+    top: 20px;
 }
 
+.post-toc ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.post-toc li {
+    margin: 5px 0;
+}
+
+.post-toc a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.post-toc a:hover {
+    color: #007acc;
 }
 
 
