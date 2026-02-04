@@ -187,6 +187,57 @@ a:focus {
     box-shadow: none;
 }
 
+/* 确保文章目录可见 */
+.widget.post-toc {
+    display: block !important;
+}
+
+.widget.post-toc.hide {
+    display: block !important; /* 覆盖hide类 */
+}
+
+/* 目录样式优化 */
+.widget.post-toc ul {
+    list-style-type: none;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.widget.post-toc li {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.widget.post-toc a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.widget.post-toc a:hover {
+    color: #007acc;
+    text-decoration: underline;
+}
+
+/* 多级目录缩进 */
+.widget.post-toc ul ul {
+    padding-left: 20px;
+}
+
+.widget.post-toc li li {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* 标题样式 */
+.widget.post-toc .widget-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+
 /* title for search result or tagged posts*/
 .label-title {
     margin-top: 1.1em;
