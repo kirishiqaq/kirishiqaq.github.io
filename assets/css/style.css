@@ -190,99 +190,51 @@ a:focus {
 /* 确保文章目录可见 */
 .widget.post-toc {
     display: block !important;
-    position: sticky;
-    top: 20px;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: 15px;
-    margin-bottom: 20px;
 }
 
+.widget.post-toc.hide {
+    display: block !important; /* 覆盖hide类 */
+}
+
+/* 目录样式优化 */
 .widget.post-toc ul {
     list-style-type: none;
-    padding-left: 0;
+    padding-left: 15px;
     margin-top: 10px;
 }
 
 .widget.post-toc li {
     margin: 8px 0;
     line-height: 1.4;
-    position: relative;
 }
 
 .widget.post-toc a {
     text-decoration: none;
     color: #555;
     font-size: 14px;
-    transition: all 0.3s;
-    display: block;
-    padding: 5px 10px;
-    border-radius: 4px;
+    transition: color 0.3s;
 }
 
 .widget.post-toc a:hover {
     color: #007acc;
-    background-color: #f0f7ff;
-    transform: translateX(3px);
-}
-
-.widget.post-toc a:before {
-    content: "•";
-    margin-right: 8px;
-    color: #999;
-    font-size: 12px;
+    text-decoration: underline;
 }
 
 /* 多级目录缩进 */
 .widget.post-toc ul ul {
     padding-left: 20px;
-    margin-top: 5px;
 }
 
-.widget.post-toc ul ul a {
+.widget.post-toc li li {
+    margin: 5px 0;
     font-size: 13px;
-    padding-left: 15px;
-}
-
-.widget.post-toc ul ul ul {
-    padding-left: 25px;
 }
 
 /* 标题样式 */
 .widget.post-toc .widget-title {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: #333;
-    font-size: 16px;
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 8px;
-}
-
-.widget.post-toc .widget-title i:before {
-    content: "📑 ";
-    margin-right: 5px;
-}
-
-/* 滚动条样式 */
-.widget.post-toc::-webkit-scrollbar {
-    width: 6px;
-}
-
-.widget.post-toc::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-}
-
-.widget.post-toc::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 3px;
-}
-
-.widget.post-toc::-webkit-scrollbar-thumb:hover {
-    background: #555;
 }
 
 
@@ -1327,9 +1279,9 @@ table tr:nth-child(2n) {
 
 
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
 
 /* 确保文章目录可见 */
 .post-toc {
@@ -1357,104 +1309,6 @@ table tr:nth-child(2n) {
     color: #007acc;
 }
 
-/* ========== 右侧独立目录栏样式 ========== */
-
-/* 右侧目录栏容器 */
-#right-sidebar {
-    border-left: 1px solid #ddd;
-    padding-left: 35px;
-    margin-top: 40px;
-    padding-bottom: 20px;
-    word-wrap: break-word;
-}
-
-/* 目录样式 - 继承左侧样式 */
-#right-sidebar .widget {
-    margin-bottom: 30px;
-}
-
-#right-sidebar .widget .widget-title {
-    color: #555858;
-    line-height: 2.7;
-    margin-top: 0;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-weight: normal;
-}
-
-#right-sidebar .widget ul {
-    color: #6E7173;
-    list-style-type: none;
-    margin-left: 18px;
-    padding: 0;
-}
-
-#right-sidebar .widget ul li {
-    margin: 5px 0;
-    line-height: 1.5;
-}
-
-#right-sidebar .widget a {
-    color: #6E7173;
-    text-decoration: none;
-    -webkit-transition: all .1s ease-in;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    transition: all .1s ease-in;
-}
-
-#right-sidebar .widget a:hover {
-    color: #444;
-}
-
-
-/* 强制覆盖现有的目录样式 */
-#right-sidebar .widget.post-toc {
-    background: inherit !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* 目录内部样式 */
-#right-sidebar .widget.post-toc ul {
-    margin-left: 0;
-    padding-left: 0;
-}
-
-#right-sidebar .widget.post-toc li {
-    margin: 8px 0;
-    line-height: 1.4;
-}
-
-#right-sidebar .widget.post-toc a {
-    display: block;
-    padding: 3px 8px;
-    border-radius: 3px;
-}
-
-#right-sidebar .widget.post-toc a:hover {
-    background-color: #f5f5f5;
-}
-
-/* 多级目录缩进 */
-#right-sidebar .widget.post-toc ul ul {
-    padding-left: 15px;
-    margin-top: 5px;
-}
-
-/* 响应式设计 */
-@media screen and (max-width: 48em) {
-    #right-sidebar {
-        display: none; /* 移动端隐藏右侧目录 */
-    }
-
-    .pure-u-md-2-4 {
-        width: 100%;
-    }
-}
 
 .modal {
     display: none; /* 默认不显示 */
@@ -1490,107 +1344,4 @@ table tr:nth-child(2n) {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-
-
-  /* ========== 文章页面三栏布局调整 ========== */
-
-  /* 1. 文章页面左侧侧边栏 */
-  .post-page #sidebar,
-  .post #sidebar,
-  body:has(.post) #sidebar {
-      border-left: 1px solid #ddd;
-      padding-left: 35px;
-      margin-top: 40px;
-      padding-bottom: 20px;
-      word-wrap: break-word;
-      width: 25%; /* 确保宽度正确 */
-  }
-
-  /* 2. 文章内容区域调整 */
-  .post-page .content_container,
-  .post .content_container,
-  body:has(.post) .content_container {
-      padding-right: 20px; /* 减少右侧内边距，为右侧目录腾空间 */
-  }
-
-  /* 3. 右侧目录栏样式修正 */
-  #right-sidebar {
-      border-left: 1px solid #ddd;
-      padding-left: 35px;
-      margin-top: 40px;
-      padding-bottom: 20px;
-      word-wrap: break-word;
-      width: 25%; /* 确保宽度正确 */
-  }
-
-  /* 4. 目录固定定位调整 */
-  #right-sidebar .widget.post-toc {
-      position: sticky;
-      top: 120px; /* 增加一些距离，避免和header重叠 */
-      max-height: calc(100vh - 160px);
-      overflow-y: auto;
-
-      /* 覆盖原有的白色背景 */
-      background: none !important;
-      box-shadow: none !important;
-      border: none !important;
-      border-radius: 0 !important;
-      padding: 0 !important;
-      margin: 0 !important;
-  }
-
-  /* 5. 继承左侧侧边栏的目录样式 */
-  #right-sidebar .widget.post-toc .widget-title {
-      color: #555858;
-      line-height: 2.7;
-      margin-top: 0;
-      font-size: 16px;
-      border-bottom: 1px solid #ddd;
-      display: block;
-      font-weight: normal;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-  }
-
-  #right-sidebar .widget.post-toc ul {
-      color: #6E7173;
-      list-style-type: none;
-      margin-left: 18px;
-      padding: 0;
-  }
-
-  #right-sidebar .widget.post-toc li {
-      margin: 5px 0;
-      line-height: 1.5;
-  }
-
-  #right-sidebar .widget.post-toc a {
-      color: #6E7173;
-      text-decoration: none;
-      -webkit-transition: all .1s ease-in;
-      -moz-transition: all .1s ease-in;
-      -o-transition: all .1s ease-in;
-      transition: all .1s ease-in;
-  }
-
-  #right-sidebar .widget.post-toc a:hover {
-      color: #444;
-  }
-
-  /* 6. 响应式设计 */
-  @media screen and (max-width: 48em) {
-      #right-sidebar {
-          display: none; /* 移动端隐藏右侧目录 */
-      }
-
-      .post-page .pure-u-md-2-4,
-      .post .pure-u-md-2-4 {
-          width: 100% !important;
-      }
-
-      .post-page #sidebar,
-      .post #sidebar {
-          display: none; /* 移动端也隐藏左侧侧边栏 */
-      }
   }
