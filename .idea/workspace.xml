@@ -29,8 +29,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update 404">
+      <change afterPath="$PROJECT_DIR$/_posts/2025-11-10-Multi Agent.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post251110/img8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2025-11-02-Pin in Rust.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-11-02-Pin in Rust.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -581,7 +590,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="225" />
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="TodoView">
