@@ -3,9 +3,9 @@ title: 虛無の載體
 subtitle: [月島 霧詩]
 keywords: kirishi
 description: ∅但为君故∅   微信公众号：雨落狂流之暗.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kirishiqaq.github.io" # 你的域名 
-page_no_title: "kirishi's blog" # 文章无标题时默认显示内容
+baseurl: ""
+url: "https://kirishiqaq.com"
+page_no_title: "kirishi's blog"
 beian: # "备案号"
 author: kirishi
 email: kirishiqaq@outlook.com
@@ -68,7 +68,8 @@ links: # 友情链接
 
 # Google Analytics
 ga_track_id: 'G-9E7XLYRQ39'            # Format: UA-xxxxxx-xx
-ga_domain: auto              # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: auto
+# 默认的是 auto
 
 
 # Code hub settings
