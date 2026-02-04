@@ -67,9 +67,9 @@ type Output = (Fut::Output, Duration);
 虽然 Fut 没有 poll 方法，但是 Pin<&mut Fut> 有, 原因：Future 的 poll 方法接收 Pin<&mut Self>，而不是普通 &mut self。<br>
 明确：Pin 存在是为了解决一个特定的问题：自指类型，也就是包含有指向了自身的指针的类型。<br>
 举例，一个二叉查找树可能含有一个自指的指针，指向了同一棵树下的另一个节点。<br>
-![](https://github.com/kirishiqaq/kirishiqaq.github.io/blob/9f10064fe34d93409c84faaa546ce6b709ff9bb8/_images/post251102/img.png)<br>
+![](https://cdn.jsdelivr.net/gh/kirishiqaq/kirishiqaq.github.io@9f10064fe34d93409c84faaa546ce6b709ff9bb8/_images/post251102/img.png)<br>
 pointer 字段指向在内存地址 A 的 val 字段，存有一个有效的 i32。这些指针都是 有效的 ，意味着这些指针所指向的内存确实可以被转换成正确的类型（在这里是 i32）。但是 Rust 编译器经常会把值在内存中四处移动。举个栗子，如果我们把这个结构体传到了某个函数里，它可能会被移动到一个不同的内存地址，或者装箱放到堆内存上，或者这个函数被存放在 Vec<MyStruct> 中。当想要往这个 Vec 里放更多值的时候，它可能会超出容量并把元素移动到一个新的，更大的缓冲区里。<br>
-![](https://github.com/kirishiqaq/kirishiqaq.github.io/blob/9f10064fe34d93409c84faaa546ce6b709ff9bb8/_images/post251102/img_1.png)<br>
+![](https://cdn.jsdelivr.net/gh/kirishiqaq/kirishiqaq.github.io@9f10064fe34d93409c84faaa546ce6b709ff9bb8/_images/post251102/img_1.png)<br>
 移动时，结构体字段的地址会被改变，但值不会。因此 pointer 字段仍然指向原来的地址 A，但地址 A 现在不再存有一个有效的 i32。那里原有的数据被移动到了地址 B，而且某些新的数据可能被写入到了地址 A，于是指针不再有效。在最好的情况下，无效的指针会引起程序崩溃，而最坏的情况下这可能会变成一个可破解的漏洞。尽量保证这类内存不安全的代码存在 unsafe 块内，在移动后及时更新指针。<br>
 有了pinned结构体，可以使用一些助手函数拿到对字段的引用。如普通的 Rust 引用，像 &mut，或者是 pinned。这被称之为 “投影” (projection)：如果有一个 pinned 结构体，就可以写一个投影方法来访问到它的所有字段。<br><br>
 简单总结，何时需要关心 Pin/Unpin？<br>
