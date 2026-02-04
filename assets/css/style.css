@@ -1358,6 +1358,49 @@ table tr:nth-child(2n) {
 }
 
 
+/* ========== 将目录移动到文章右侧 ========== */
+
+/* 文章页面特殊处理 */
+.post .post-content {
+    position: relative;
+    padding-right: 300px; /* 为目录留出空间 */
+}
+
+/* 右侧目录固定定位 */
+.widget.post-toc {
+    position: fixed;
+    right: calc((100vw - 1150px) / 2 + 20px); /* 居中计算 */
+    top: 100px;
+    width: 250px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .widget.post-toc {
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .post .post-content {
+        padding-right: 0;
+    }
+
+    .widget.post-toc {
+        position: static;
+        width: auto;
+        margin: 30px 0;
+    }
+}
+
 .modal {
     display: none; /* 默认不显示 */
     position: fixed;
