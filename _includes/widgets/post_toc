@@ -1,37 +1,9 @@
-<div class="widget post-toc">
-    <div class="widget-title"><i class="icon-post-toc"> 文章目录</i></div>
-    <ul></ul>
+<div class="widget post-toc hide">
+    <div class="widget-title"><i class="icon-post-toc"> 文章目录</i></div><ul></ul>
 </div>
 <script type="text/javascript">
-// 等待DOM完全加载
-document.addEventListener('DOMContentLoaded', function() {
-    // 延迟执行，确保所有元素都已渲染
-    setTimeout(initTOC, 300);
-});
-
-function initTOC() {
-    var toc = document.querySelector('.post-toc');
-    var content = document.querySelector('.post-content');
-    var post = document.querySelector('.post');
-
-    if (!toc || !content || !post) {
-        console.error('找不到目录所需元素');
-        return;
-    }
-
-    // 如果有标题才生成目录
-    var headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    if (headings.length === 0) {
-        console.log('文章中没有找到标题');
-        return;
-    }
-
-    console.log('找到', headings.length, '个标题，开始生成目录...');
-    TOCize(toc, content, post);
-}
-
 function TOCize(toc, content, matchHeightTo) {
-    if (!(toc && content && matchHeightTo)) return false;
+    if (!(toc && content && matchHeightTo)) return false
 
     var cnt = 0;
 
@@ -158,7 +130,11 @@ function TOCize(toc, content, matchHeightTo) {
     };
     window.addEventListener('scroll', s1, false);
     window.addEventListener('resize', s1, false);
-
-    console.log('目录生成完成，共', cnt, '个条目');
 }
+
+TOCize(
+    document.querySelector('.post-toc'),
+    document.querySelector('.post-content'),
+    document.querySelector('.post')
+);
 </script>
