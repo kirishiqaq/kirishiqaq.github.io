@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "IoTDB - RegionGroup均衡算法"
-date:   2025-12-11 12:00:00 +0800--
+date:   2025-10-11 12:00:00 +0800--
 categories: [技术杂谈]
 tags:   [IoTDB]
 ---
@@ -21,7 +21,7 @@ tags:   [IoTDB]
 #### 算法流程
 直接将 RegionGroup 的 leader 放置于目前持有 leader 数最少的 DataNode 上：
 
-![](/images/post20251211/img.png)
+![](/images/post20251011/img.png)
 
 DataNode-2 持有的 leader 数最少（1个），因此将新 RegionGroup 的 leader 放置于 DataNode-2 即可。
 
@@ -40,7 +40,7 @@ DataNode-2 持有的 leader 数最少（1个），因此将新 RegionGroup 的 l
 #### 示例
 3 replica，5 RegionGroup，3 DataNode 集群的示例网络
 
-![](/images/post20251211/img_1.png)
+![](/images/post20251011/img_1.png)
 
 算法需要为每个 RegionGroup 决定唯一的 DataNode，将该 RegionGroup 的 Leader 置于该 DataNode 上，即二分图匹配问题。
 
@@ -69,7 +69,7 @@ DataNode-2 持有的 leader 数最少（1个），因此将新 RegionGroup 的 l
 
     3.本算法对流量网络的边集定义如下：
 
-![](/images/post20251211/img_2.png)
+![](/images/post20251011/img_2.png)
 
 ### 算法分析
 
@@ -99,7 +99,7 @@ DataNode-2 持有的 leader 数最少（1个），因此将新 RegionGroup 的 l
 
 ## 为什么不采用贪心算法
 
-![](/images/post20251211/img_3.png)
+![](/images/post20251011/img_3.png)
 
 图示有三个 RegionGroup：
 
