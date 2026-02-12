@@ -22,20 +22,55 @@ layout: base
     </h2>
 
     <div class="post-meta">
-        <span>
-        <i class="icon-post-date"> {{ post.date | date: "%Y年%m月%d日" }}
+    <span>
+        <i class="icon-post-date"> {{ post.date | date: "%Y年%m月%d日" }}</i>
 
-        </i>
-            <!-- 显示每篇博客阅读量, id 将作为查询条件 -->
-                <span id={{post.url}} class="leancloud-visitors" data-flag-title={{post.title}}>
-                    <span class="post-meta-divider">|</span>
-                    <span class="post-meta-item-text">阅读量 </span>
-                    <span class="leancloud-visitors-count"></span>
-                </span>
-                &#x1F601
+        <!-- 显示每篇博客阅读量, id 将作为查询条件 -->
+        <span id={{post.url}} class="leancloud-visitors" data-flag-title={{post.title}}>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-text">阅读量 </span>
+            <span class="leancloud-visitors-count"></span>
         </span>
 
+        <!-- 随机猫表情会显示在这里 -->
+        <span class="random-cat-emoji"></span>
+
+    </span>
     </div>
+
+    <script>
+        // 所有猫表情的 HTML 实体编码（猫脸 + 完整身体）
+        const catEmojis = [
+            '&#x1F63A;', // 😺 咧嘴笑的猫
+            '&#x1F638;', // 😸 高兴得笑出泪的猫
+            '&#x1F63B;', // 😻 爱心眼的猫
+            '&#x1F63D;', // 😽 亲亲的猫
+            '&#x1F63C;', // 😼 坏笑/得意的猫
+            '&#x1F640;', // 🙀 吃惊/疲惫的猫
+            '&#x1F63F;', // 😿 哭哭的猫
+            '&#x1F63E;', // 😾 生气的猫
+            '&#x1F639;', // 😹 笑哭的猫
+            '&#x1F408;', // 🐈 标准猫，四脚着地，有尾巴
+            '&#x1F408;&#x200D;&#x2B1B;', // 🐈‍⬛ 黑猫，有尾巴
+            '&#x1F406;', // 🐆 豹子（乱入）
+            '&#x1F415;'  // 🐕 狗（乱入）
+        ];
+
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 找到所有需要显示随机猫表情的位置
+            const catSpans = document.querySelectorAll('.random-cat-emoji');
+
+            catSpans.forEach(span => {
+                // 随机选一个表情
+                const randomIndex = Math.floor(Math.random() * catEmojis.length);
+                const randomCat = catEmojis[randomIndex];
+
+                // 插入到 span 中
+                span.innerHTML = randomCat;
+            });
+        });
+    </script>
 
     <div class="post-content">{{ post.content | strip_html | truncate:160 }}</div>
 
