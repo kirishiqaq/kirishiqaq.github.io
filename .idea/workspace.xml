@@ -29,7 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update posts">
-      <change beforePath="$PROJECT_DIR$/_posts/2025-06-08-一些记忆.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-06-08-一些记忆.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2025-12-18-感官II.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -580,7 +580,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="272" />
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="TodoView">
