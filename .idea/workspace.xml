@@ -29,7 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update posts">
-      <change afterPath="$PROJECT_DIR$/_posts/2025-09-15-Redis-client.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2024-11-01-闲杂记录.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2026-02-09-我和你.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2026-02-09-你和我.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -580,7 +581,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="282" />
+    <option name="localTasksCounter" value="283" />
     <servers />
   </component>
   <component name="TodoView">
