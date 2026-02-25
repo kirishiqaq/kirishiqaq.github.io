@@ -29,8 +29,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update posts">
-      <change afterPath="$PROJECT_DIR$/_posts/2024-11-01-闲杂记录.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2026-02-09-我和你.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2026-02-09-你和我.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2024-09-01-Canvas运动粒子.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20240901/img.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20240901/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20240901/img1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20240901/img2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/post20240901/img_1.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,25 +91,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hanzeyu.kirshi/Github/kirishiqaq.github.io&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hanzeyu.kirshi/Github/kirishiqaq.github.io/images/post20240901",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/post20240901" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/imgs" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/live2dw" />
-      <recent name="$PROJECT_DIR$/assets/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images/post251102" />
@@ -581,7 +585,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="283" />
+    <option name="localTasksCounter" value="284" />
     <servers />
   </component>
   <component name="TodoView">
