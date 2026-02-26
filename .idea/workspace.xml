@@ -29,9 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1108593-cb63-4cf8-9894-877d9ad19767" name="Default" comment="feat:update posts">
-      <change afterPath="$PROJECT_DIR$/_posts/2025-01-01-Promise状态.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20250101/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/post20250101/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_posts/2025-11-22-异步线程池选择.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,18 +87,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/hanzeyu.kirshi/Github/kirishiqaq.github.io/images/post20240901",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hanzeyu.kirshi/Github/kirishiqaq.github.io/images/post20240901&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images/post20240901" />
@@ -116,7 +115,7 @@
       <recent name="$PROJECT_DIR$/_images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.resize_image">
     <configuration name="post.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/oukohou.github.io/_layouts/post.html">
       <method v="2" />
     </configuration>
@@ -582,7 +581,7 @@
       <option name="project" value="LOCAL" />
       <updated>1715648269055</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <option name="localTasksCounter" value="287" />
     <servers />
   </component>
   <component name="TodoView">
